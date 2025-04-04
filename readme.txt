@@ -1,31 +1,31 @@
 L1JMapGen
 --------------------
 
--これは何？-
-V2Map実装時に書いたマップ生成ツールを公開用に書き直したものです。
+- What does it do? -
+This is a tool that processes maps described in V2Map format and makes them usable by an L1J (Lineage 1 Japan) server.
 
--何が出来ますか？-
-V1Map、V2Mapファイルの一括生成
-TextMapReader用のMAP_INFO生成
-調査用の全タイル値生成
+- What is output? -
+Analysis results of V1Map and V2Map files
+MAP_INFO information for TextMapReader
+All tile information for the server
 
--どのように使えば良いでしょう？-
-1. ./config/config.propertiesを開き、LineageMapDirectoryを正しいパスに編集。
-2. コマンドラインから、L1JMapGenディレクトリへ移動。
-3. java -jar l1jmapgen.jar
+- How should I use it? -
+1. Open ./config/config.properties and edit LineageMapDirectory to the correct path.
+2. From the command line, navigate to the L1JMapGen directory.
+3. Run: java -jar l1jmapgen.jar
 
--Eclipseで正しく開けません-
-テスト用のライブラリが不足しているためです。
-もしテストを動作させる必要があれば、以下のライブラリをlibディレクトリへ置いて下さい。
-asm-3.3.1.jar
-cglib-2.2.jar
-easymock-3.0.jar
-objenesis-1.2.jar
-ツール本体のソースコードからは上記ライブラリは参照していない為、無くてもビルド可能です。
+- Warnings appear in Eclipse -
+This is because the libraries required for testing are missing.
+If you need to run tests, please add the following libraries to a 'lib' directory:
+  asm-3.3.1.jar
+  cglib-2.2.jar
+  easymock-3.0.jar
+  objenesis-1.2.jar
+Since the source code of the tool itself does not reference these libraries, building is possible even without them.
 
--ライセンス-
-適当にどうぞ
+- License -
+Do as you like / Feel free
 
--謝辞-
-V1マップ生成にあたり、L1MapToolを参考にさせていただいた部分があります。
-原作者の方にこの場を借りてお礼申し上げます。
+- Acknowledgements -
+For the V1 map analysis, L1MapTool was used as a reference. Thank you very much.
+I am using the modified version available on the author's website.
